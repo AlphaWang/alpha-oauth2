@@ -7,6 +7,7 @@ import org.springframework.security.oauth2.config.annotation.web.configuration.E
 import org.springframework.security.oauth2.config.annotation.web.configurers.AuthorizationServerEndpointsConfigurer;
 import org.springframework.security.oauth2.config.annotation.web.configurers.AuthorizationServerSecurityConfigurer;
 
+// 授权服务器配置
 @Configuration
 @EnableAuthorizationServer
 public class OAuth2AuthorizationServerConfig implements AuthorizationServerConfigurer {
@@ -21,6 +22,7 @@ public class OAuth2AuthorizationServerConfig implements AuthorizationServerConfi
             .withClient("clientapp")
             .secret("112233")
             .redirectUris("http://localhost:9001/callback")
+            // 只支持授权码模式
             .authorizedGrantTypes("authorization_code")
             .scopes("read_userinfo", "read_contacts");
     }
