@@ -52,10 +52,11 @@ httpSecurity.authorizeRequests()
 curl -X POST --user clientapp:112233 http://localhost:8080/oauth/token -H "accept: application/json" -H "content-type: application/x-www-form-urlencoded" -d "grant_type=password&username=bobo&password=xyz&scope=read_userinfo"
 ```
 
-弹出提示框，输入用户名密码（properties文件中配置）；
-提示是否同意授权。
 
-API: `oauth/authorize`  
+API: `oauth/token`  
+Authorization:
+- basic: clientapp:112233 
+
 Params:
 - client_id=clientapp
 - grant_type=password
