@@ -29,13 +29,15 @@ Response:
 
 ### 2. 调用API
 
+```
 curl -X GET http://localhost:9002/api/userinfo -H "authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE1NjAxMTg1ODMsInVzZXJfbmFtZSI6ImFscGhhIiwiYXV0aG9yaXRpZXMiOlsiUk9MRV9VU0VSIl0sImp0aSI6IjlmNzdmYWI3LThmODctNDBmYi04MWExLTE0NzBiM2NiMGYzYiIsImNsaWVudF9pZCI6ImNsaWVudGFwcCIsInNjb3BlIjpbInJlYWRfdXNlcmluZm8iXX0.50fxwwdqSDh-mqY7Dyc7Gq6f2oe6sQ3fusSLhkLFd_Y"
+```
 
-案例响应：
+Response:
 
 ```json
 {
-    "name": "bobo",
-    "email": "bobo@spring2go.com"
+    "name": "alpha",
+    "email": "alpha@alphawang.com"
 }
 ```
