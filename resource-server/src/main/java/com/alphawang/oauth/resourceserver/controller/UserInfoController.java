@@ -12,13 +12,13 @@ public class UserInfoController {
     // 资源API
     @RequestMapping("/api/userinfo")
     public ResponseEntity<UserInfo> getUserInfo() {
-        User user = (User) SecurityContextHolder.getContext()
+        String username = (String) SecurityContextHolder.getContext()
             .getAuthentication().getPrincipal();
         
-        String email = user.getUsername() + "@alphawang.com";
+        String email = username + "@alphawang.com";
 
         UserInfo userInfo = new UserInfo();
-        userInfo.setName(user.getUsername());
+        userInfo.setName(username);
         userInfo.setEmail(email);
 
         return ResponseEntity.ok(userInfo);
